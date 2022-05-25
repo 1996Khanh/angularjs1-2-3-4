@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../anguler.link/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+Tháng(chữ) ngày năm  :{{today | date}}<br>
+{{today | date:'mediumDate'}}<br>
+Tháng ngày năm giờ phút (AM-PM) :{{today | date: 'short'}}<br>
+Tháng(chữ) ngày năm giờ phút giây(AM-PM) {{today | date:'medium'}}<br>
+Tháng/ ngày /năm:{{today | date:'shortDate'}}<br>
+Tháng(chữ), ngày năm:{{today | date:'longDate'}}<br>
+Thứ,Ngày,Tháng,Năm{{today | date:'fullDate'}}<br>
+Năm:{{today | date:'yyyy'}}<br>
+Giờ:Phút:{{today | date:'shortTime'}}<br>
+Giờ:Phút:Giây:{{today | date:'mediumTime'}}<br>
+</body>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myController', function ($scope){
+        $scope.today = new Date();
+    });
+</script>
+</html>

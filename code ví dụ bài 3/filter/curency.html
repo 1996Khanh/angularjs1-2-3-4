@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../../anguler.link/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myController">
+        {{person.salary | currency}}<br>
+        {{person.salary | currency:'Euro'}}<br>
+        {{person.salary | currency:'Euro':2}}<br>
+        {{person.salary | currency:'VND':3}}<br>
+    </div>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myController', function ($scope){
+            $scope.person = {salary:1000000}
+        });
+    </script>
+</body>
+</html>

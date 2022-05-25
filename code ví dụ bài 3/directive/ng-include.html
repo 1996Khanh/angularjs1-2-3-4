@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../anguler.link/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<h1>ng-include directive</h1>
+<div ng-include="'include1.html'"></div>
+<div ng-include="'include2.html'"></div>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('SPController',function ($scope){
+        $scope.quantity = 1;
+        $scope.price = 9.99;
+    });
+</script>
+</body>
+</html>

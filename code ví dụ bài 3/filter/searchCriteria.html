@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../anguler.link/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myController">
+    <input type="text" ng-model="searchCriteria"><br>
+    result: {{myArr | filter: searchCriteria}}
+</div>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myController',function ($scope){
+        $scope.myArr = ['Khánh','Hạnh','Dương','Tiến','Hiến'];
+    });
+</script>
+
+</body>
+</html>

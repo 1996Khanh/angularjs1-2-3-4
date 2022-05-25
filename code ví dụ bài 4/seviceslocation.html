@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../anguler.link/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        <div>{{currentURL}}</div>
+    </div>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myController',function ($scope,$location){
+            $scope.currentURL = $location.absUrl();
+        });
+
+    </script>
+</body>
+</html>
